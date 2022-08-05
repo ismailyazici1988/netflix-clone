@@ -1,5 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Lobster&family=Roboto&family=Sorts+Mill+Goudy&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #title-red{
     color: red;
+}
+.p1{
+    margin: 0;
+}
+.lower-inputs{
+    margin-top: 10px;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./netflix.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 98vh;
+}
+.main-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.form-container{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+
 }
