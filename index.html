@@ -6,22 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix Survey</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/7fa5bead2a.js" crossorigin="anonymous"></script>
-    
-
+    <script src="https://kit.fontawesome.com/2638b697cd.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main-container">
-        <div class="heading-container">
             <h1 id="main-title">NET<span id="title-red">FLIX</span></h1>
-            <p>Thank you for signing up to Netflix.Tell me more about yourself</p>
-        </div>
+            <p id="sub-title">Thank you for signing up to Netflix. Tell me more about yourself.</p>
         <div class="form-container">
-
-            <div class="upper-inputs">
+            <form action="send.php" method="post">
                 <div class="text-input">
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name"placeholder="enter your name">
+                    <input type="text" name="name" id="name" placeholder="enter your name">
                 </div>
                 <div class="text-input">
                     <label for="age">Age</label>
@@ -29,44 +24,51 @@
                 </div>
                 <div class="text-input">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email"placeholder="enter your email">
+                    <input type="email" name="email" id="email" placeholder="enter your email">
                 </div>
                 <div class="content-type">
                     <label for="content-type">Content Type</label>
                     <select name="content-type" id="content-type">
-                        <option value="content-type" selected>Series<option>
+                        <option value="content-type" selected>Series</option>
                     </select>
                 </div>
-            </div>
-            <div class="lower-inputs">
-                <div class="select-area">
-                    <p class="p1">Movie Type</p>
-                    <input type="checkbox" name="comedy"id="comedy" checked/>
-                    <label for="comedy">Comedy</label><br>
-                    <input type="checkbox" name="action"id="action"/>
-                    <label for="action">Action</label><br>
-                    <input type="checkbox" name="romance"id="romance" checked/>
-                    <label for="romance">Romance</label>
+                <div class="multi-area">
+                    <div class="check-content">
+                        <p>Movie Type</p>
+                        <div class="check-box">
+                        <input checked type="checkbox" name="comedy" id="comedy"/>
+                        <label for="comedy">Comedy</label>
+                        </div>
+                        <div class="check-box">
+                        <input type="checkbox" name="action" id="action"/>
+                        <label for="action">Action</label>
+                        </div>
+                        <div class="check-box">
+                        <input checked type="checkbox" name="romance" id="romance"/>
+                        <label for="romance">Romance</label>
+                        </div>
+                    </div>
+                    <div class="radio-content">
+                        <p>Gender</p>
+                        <div class="radio-box">
+                            <input type="radio" name="male" id="male" value="male"/>
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="radio-box">
+                            <input checked type="radio" name="female" id="female" value="female"/>
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="radio-box">
+                            <input type="radio" name="other" id="other" value="other"/>
+                            <label for="other">Other</label>
+                        </div> 
+                    </div>
+                        <p>Feedback</p>
+                        <textarea name="feedback" id="feedback" placeholder="any comment"></textarea>
+                        <input type="submit" id="button" value="Send">
                 </div>
-                <div class="gender-area">
-                    <p class="p1">Gender</p>
-                    <input type="radio" name="gender" value="male" id="male">
-                    <label for="male">Male</label><br>
-                    <input type="radio" name="gender" value="female" id="female" checked>
-                    <label for="female">Female</label><br>
-                    <input type="radio" name="gender" value="other" id="other">
-                    <label for="other">Other</label>
-                </div>
+            </form>
             </div>
-            <div class="comment-area">
-                <p class="p1">Feedback</p>
-                <textarea name="comment" id="comment" cols="40" rows="5" placeholder="any comment"></textarea>
-            </div>
-            <div class="button-area">
-                <button>Send</button>
-            </div>
-        </div>
     </div>
-    
 </body>
 </html>
